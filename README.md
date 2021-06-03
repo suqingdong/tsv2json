@@ -19,3 +19,16 @@ tsv2json examples/demo.tsv -c 'name' -H 0
 
 tsv2json examples/demo.csv -s , 
 ```
+
+## Use in Python
+```python
+from tsv2json.core import TSV
+
+tsv = TSV('examples/demo.tsv')
+
+print(tsv.data)
+
+print(tsv.to_json(indent=2))
+
+tsv.to_json('out.json')
+```
